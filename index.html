@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>card</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!---
+	<section id="parent">
+		
+	<section class="child">
+		<img src="" alt="sravya">
+		<h4>Sravya</h4>
+		<p>micheetisravya@gmail.com</p>
+		<p>9381682102</p>
+		<a href="index.html">resume</a>
+	</section>
+
+	<section class="child">
+		<img src="" alt="sravya">
+		<h4>Sravya</h4>
+		<p>micheetisravya@gmail.com</p>
+		<p>9381682102</p>
+		<a href="index.html">resume</a>
+	</section>
+
+	<section class="child">
+		<img src="" alt="sravya">
+		<h4>Sravya</h4>
+		<p>micheetisravya@gmail.com</p>
+		<p>9381682102</p>
+		<a href="index.html">resume</a>
+	</section>
+
+	</section>
+--->
+<script>
+var click=true;
+function sample(){
+	//var name = document.form1.name.value;
+	//var name1 = document.form1.name1.value;
+	//var name = document.getElementById("name1").value;
+	//var genders = document.getElementsByName("gender")
+	//alert("totalgenders: "+genders.length)
+	//var totalpara = document.getElementsByTagName("p");
+	//alert("Total paragraphs in this page: "+totalpara.length);
+	var data = "NAME : <input type='text' name='name'><br>Comments:<br><textarea rows='10' cols='10'></textarea><br><input type='submit' value='postcomments'>";
+	if(click){
+	document.getElementById("areapoint").innerHTML=data;
+	click=false;
+    }
+    else{
+    	document.getElementById("areapoint").innerHTML="";
+    	click=true;
+    } 
+}
+function check(){
+	var message;
+	if(document.form1.pswd.value.length>6){
+		message="exellent";
+	}
+	else{
+		message="poor";
+	}
+	document.getElementById("mypassword").innerText=message;
+}
+
+</script>
+<form name="form1">
+	<!--<input type="button" value="show" onclick="sample()">
+
+	<div id="areapoint">
+		
+	</div>
+-->
+<input type="password" name="pswd" value="pswd" onkeyup="check()">PASSWORD STRENGTH:<span id="mypassword">no strength</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	<h2>paragraph</h2>
+	<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+	<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	<h2>paragraph</h2>
+	<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+	<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	<h2>paragraph</h2>
+	<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+	<button onclick="print()">count</button>--->
+	<!--MALE:<input type="radio" name="gender" value="male">
+	FEMALE:<input type="radio" name="gender" value="female">
+	Others:<input type="radio" name="gender" value="others">
+	<input type="button" onclick="print()" value="totalgenders">-->
+	<!--<input type="button" value="clickme"onclick="print()">-->
+	<!--<input type="text" id="name1" name="name"/>-->
+	<!--<input type="text" name="name1"/>-->
+	<!--<input type="button" value="click me" onclick="print()">-->
+</form>
+</body>
+</html>
